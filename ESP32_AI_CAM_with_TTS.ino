@@ -5,6 +5,10 @@
   AI Thinker ESP32-CAM with OV2640(Default cam)and PSRAM
   MAX98357A Amplifier for TTS
   4ohm 3watt woofer
+   Features
+- Captures image using ESP32-CAM and store them in SD card
+- Sends last image to Gemini AI if button 2 pressed
+- Converts Gemini's response into speech using Google TTS
   
   Select Board "AI Thinker ESP32-CAM"
   GPIO 0 must be connected to GND to upload a sketch
@@ -57,9 +61,9 @@
 #include <rom/rtc.h>
 
 // WiFi credentials
-const char* ssid = "Airtel_9359531817";
-const char* password = "samir0811";
-const char* gemini_api_key = "AIzaSyBW0tAZ0Kctp0clEUlJ7c7zMNU0peSYA7g";
+const char* ssid = "Your_WiFi_SSID";
+const char* password = "Your_WiFi_Password";
+const char* gemini_api_key = "Your_Gemini_API_key";
 
 // Audio pins
 #define I2S_DOUT      2
